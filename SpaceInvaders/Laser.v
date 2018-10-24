@@ -27,7 +27,7 @@ parameter STEP_MOTION = 1 ; // Number of pixels of vertical laser motion
 reg laserAlive;
 assign vgaInLaser = (hPos - xLaser) * (hPos - xLaser) + (vPos - yLaser) * (vPos - yLaser) <= RADIUS * RADIUS;
 
-always @ (clk) begin
+  always @ (posedge clk) begin
   if (reset) begin
     laserAlive <= 0;
   end
