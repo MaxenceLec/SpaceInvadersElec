@@ -85,12 +85,12 @@ always @(posedge clk) begin
 
             
                         
-            if (hPos < gunPosition - SHIP_WIDTH/2 + RECT_WIDTH || hPos > gunPosition + SHIP_WIDTH/2 - RECT_WIDTH || vPos == (H_OFFSET+1)) begin
+            if (hPos < gunPosition - SHIP_WIDTH/2 + RECT_WIDTH || hPos > gunPosition + SHIP_WIDTH/2 - RECT_WIDTH || vPos == (V_OFFSET+1)) begin
 
                 color <= SPACESHIP;
 
             end  
-            else if ((hPos < gunPosition && hPos > gunPosition - (SHIP_HEIGHT + H_OFFSET - vPos)) || (hPos > gunPosition && hPos < gunPosition + (SHIP_HEIGHT + H_OFFSET - vPos))) begin
+            else if ((hPos < gunPosition && hPos > gunPosition - (SHIP_HEIGHT + V_OFFSET - vPos)) || (hPos > gunPosition && hPos < gunPosition + (SHIP_HEIGHT + V_OFFSET - vPos))) begin
 
                 color <= SPACESHIP;
 
